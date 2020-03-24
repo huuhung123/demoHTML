@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        body {
+            background-color: #EEE;
+            font-family: sans-serif;
+        }
+
+        .list-item {
+            color: red;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 16px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            background-color: #DDD;
+        }
+
+        .list-item-transparent {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1));
+            color: #FFF;
+        }
+
+        .list-item-pattern {
+            background-image: url(./1.png);
+            background-size: 7%;
+            /*so voi anh that  */
+            background-repeat: no-repeat; /*default: repeat*/
+            height: 100px;
+            color: white;
+        }
+
+        .list-item-image {
+            background-image: url(./2.png);
+            height: 100px;
+            color: white;
+            /*fit anh vao trong khung hinh: 2 cach*/
+            /* background-size: contain;  hinh anh nho di ->no se repeat-x 1 1 1*/
+            background-size: cover; /*buc anh rat la to -> keo len        1*/
+            /*kich thuoc that*/
+            background-position-x: 0px;  
+            background-position-y: -100px;
+        }
+
+        .list-item-parallax {
+            background-image: url(./2.png);
+            background-size: cover;
+            height: 100px;
+            color: white;
+            background-attachment: fixed /*kéo theo*/;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="list-item">
+        List item 1
+    </div>
+    <div class="list-item list-item-transparent">
+        List item 2
+    </div>
+    <div class="list-item list-item-pattern">
+        Lisy item 3
+    </div>
+    <div class="list-item list-item-image">
+        Lisy item 4
+    </div>
+    <div class="list-item list-item-parallax">
+        Lisy item 5
+    </div>
+    <div class="list-item">
+        Lisy item 7
+    </div>
+    <div class="list-item">
+        Lisy item 8
+    </div>
+    <div class="list-item">
+        Lisy item 9
+    </div>
+    <div class="list-item">
+        Lisy item 10
+    </div>
+</body>
+
+</html>

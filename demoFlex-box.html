@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            background: #ddd;
+            /*lưu ý có height khi mà dùng column  */
+            height: 250px;
+            display: flex; 
+            flex-direction: row;
+             /*Chỉnh các thằng con với hướng hiện tại*/
+            justify-content: flex-start;
+            /*Chỉnh các thằng con Hướng vuông góc với hướng hiện tại*/
+            align-items: flex-start;
+        }
+
+        .child-1 {
+            background: red;
+            /*Kích thước, tùy theo kích thước của thầng cha*/
+            flex-basis: 150px;
+            /*Con du, chia ra moi than 1 phan*/
+            flex-grow: 1;
+        }
+
+        .child-2 {
+            background: green;
+            flex-basis: 200px;
+            flex-grow: 1;
+        }
+
+        .child-3 {
+            background: blue;
+            flex-basis: 150px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="child-1">Child 1</div>
+        <div class="child-2">Child 2</div>
+        <div class="child-3">Child 3</div>
+    </div>
+
+</body>
+
+</html>

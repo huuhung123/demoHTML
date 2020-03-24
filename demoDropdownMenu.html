@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .menu{
+        display: flex;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu li{
+        padding: 8px 16px;
+    }
+    ,menu li:hover{
+        background-color: #EEE;
+    }
+    .has-submenu:hover .submenu{
+        display: block;
+    }
+    .submenu{
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 100%;
+        background-color: #EEE;
+    }
+    .has-submenu{
+        position: relative;
+    }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>Home</li>
+        <li class="has-submenu">About
+            <ul class="submenu">
+                <li>Company</li>
+                <li>Team</li>
+            </ul>
+        </li>
+        <li>Contact</li>
+    </ul>
+</body>
+</html>

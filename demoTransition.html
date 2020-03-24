@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .button {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            padding: 8px 16px;
+            display: inline-block;
+            background-color: #DDD;
+            transition: ;
+        }
+
+        .button:hover {
+            color: #FFF;
+            background-color: #8393c5;
+        }
+
+        .album-item {
+            width: 200px;
+            height: 200px;
+            background-image: url(https://picsum.photos/200/200);
+            background-size: cover;
+            background-position: center;
+           
+        }
+        .album-item .overlay{
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        .album-item:hover .overlay{
+            opacity: 1;
+        }
+        .album-item .overlay img{
+            transform: scale(0);
+            transition: all 0.3s;
+        }
+        .album-item:hover .overlay img{
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="button">Link</a>
+
+    <giv class="album-item">
+        <div class="overlay">
+            <img src="./4.png">
+        </div>
+    </giv>
+</body>
+
+</html>

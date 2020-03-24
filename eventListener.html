@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO list</title>
+</head>
+
+<body>
+    <input id="new-item" type="text" />
+    <button id="add-btn">Add</button>
+    <ul id="todo-list">
+
+    </ul>
+</body>
+
+<script type="text/javascript">
+    var todoList = [
+        'Take shower',
+        'Have a walk',
+        'Go to bed'
+    ];
+
+    var addBtn = document.getElementById('add-btn');
+    // addBtn.onclick = addItem(); // underfine
+    //addBtn.onclick = addItem; // chuyen het qua JS, k de JS trong HTMl, chi 1 su kien cho onclick thoi
+    addBtn.addEventListener('click',addItem);
+    addBtn.addEventListener('click', function() {
+        console.log('Add button is clicked');
+    }) ;
+    // addBtn triggers a click event
+    // eventListener
+    //a click event is tringgered
+    function addItem() {
+        // get value of input
+        var input= document.getElementById('new-item');
+        var newItem = input.value;
+        // add to todoList array
+        todoList.push(newItem);
+        // re-render
+        render();
+        // clear input
+        input.value ='';
+    }
+
+    function render() {
+        var htmlList = document.getElementById('todo-list');
+        var content = todoList.map(function (item) {
+            return '<li>' + item + '</li>';
+        });
+        htmlList.innerHTML = content.join('');
+    }
+
+    render();
+
+</script>
+
+</html>
